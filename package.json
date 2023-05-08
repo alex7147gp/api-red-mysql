@@ -1,0 +1,28 @@
+{
+  "name": "microservices",
+  "version": "1.0.0",
+  "description": "this is a red social about ideas an solucion about programation ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon api/index.js",
+    "dev:my-sql": "nodemon my-sql/index.js",
+    "dev:post": "nodemon post/index.js",
+    "start": "node api/index.js"
+  },
+  "author": "john cc",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "axios": "^1.4.0",
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mysql": "^2.18.1",
+    "nanoid": "^4.0.2",
+    "nodemon": "^2.0.22",
+    "swagger-ui-express": "^4.6.2"
+  }
+}
