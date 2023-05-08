@@ -9,8 +9,18 @@ function createRemoteDB(host, port) {
 		return req(table)
 	}
 
+	function getUser(table, id) {
+		return req(table, id)
+	}
+
 	function req(table, data = null) {
-		const url = `${URL}/${table}`
+		
+        let url = `${URL}/${table}`
+
+        if (data) {
+        	url = `${url}/${data}`
+        }
+
 		let body = ""
 
 		return new Promise((res, rej) => {
