@@ -6,7 +6,7 @@ module.exports = function (injectedStore) {
   
   let service = injectedStore
 
-  if (service) {
+  if (!service) {
   	service = new require("../../../store/my-sql")
   }
 

@@ -9,7 +9,7 @@ module.exports = function (injectedStore) {
   let service = injectedStore
 
   if (!service) {
-    service = require("../../../store/dummy")
+    service = require("../../../store/my-sql")
   }
 
   const table = "user"
