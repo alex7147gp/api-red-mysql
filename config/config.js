@@ -5,7 +5,7 @@ if (process.env.NODE_ENV === undefined) {
 const URI = encodeURI(process.env.MONGODB_URI);
   
 const config = {
-  remoteDB: process.env.REMOTE_DB || false
+  remoteDB: process.env.REMOTE_DB || false,
   mongoDbUri: URI,
   port: process.env.PORT,
   jwtSecret: process.env.JWT_SECRET,
