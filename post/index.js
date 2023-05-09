@@ -22,9 +22,7 @@ app.get("/post", (req, res) => {
   res.send("this will greet red social")
 })
 
-app.use("/post/v1", router)
-
-router.use("/post", network)
+app.use("/api/post", network)
 
 app.use(logErrors)
 
