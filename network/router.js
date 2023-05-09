@@ -11,7 +11,7 @@ const routerApi = (app) => {
 
 
 
-	app.use("/", router)
+	app.use("/api/v1", router)
 
     router.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDoc))
     router.use("/user", useRouter)

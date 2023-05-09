@@ -18,11 +18,11 @@ app.use(express.json())
 
 app.use(cors())
 
-app.get("/", (req, res) => {
+app.get("/post", (req, res) => {
   res.send("this will greet red social")
 })
 
-app.use("/api/v1", router)
+app.use("/post/v1", router)
 
 router.use("/post", network)
 
