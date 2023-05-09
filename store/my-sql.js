@@ -39,9 +39,7 @@ function handleCon() {
 
 handleCon();
 
-class userService {
-
-	getUsers(table) {
+function getUsers(table) {
 	  console.log(table)
 	  return new Promise( (res, rej) => {
 		connection.query(`SELECT * FROM ${table}`, (err, data) => {
@@ -51,7 +49,7 @@ class userService {
 	  })
     }
 
-    getUser(table, id) {
+function getUser(table, id) {
 	  return new Promise( (res, rej) => {
 		connection.query(`SELECT * FROM ${table} WHERE id ='${id}'`, (err, data) => {
 			if (err) return rej(err)
@@ -60,7 +58,7 @@ class userService {
 	  })
     }
 
-    addUser(table, data) {
+function addUser(table, data) {
 	  return new Promise( (res, rej) => {
 		connection.query(`INSERT INTO ${table} SET ?`, data, (err, result) => {
 			if (err) return rej(err)
@@ -69,7 +67,7 @@ class userService {
 	  })
     }
 
-    updateUser(table, data) {
+function updateUser(table, data) {
 	  
 	  return new Promise( (res, rej) => {
 		connection.query(`UPDATE ${table} SET ? WHERE id=?`, [data, data.id], (err, result) => {
@@ -79,7 +77,7 @@ class userService {
 	  })
     }
 
-    async singToken(user) {
+async function singToken(user) {
       const payload = {
         sub: user.id,
         role: "user"
@@ -90,7 +88,7 @@ class userService {
       return { user, token }
     }
 
-    following(table, query, join) {
+function following(table, query, join) {
 
     	const key = Object.keys(join)[0]
     	const val = join[key]
@@ -103,6 +101,5 @@ class userService {
     		})
     	})
     }
-}
 
-module.exports = userService
+module.exports = { getUsers, getUser, addUser, updateUser, singToken, following }

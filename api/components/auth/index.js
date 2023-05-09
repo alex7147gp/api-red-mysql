@@ -1,4 +1,11 @@
-const store1 = require("../../../store/remote-mySql");
 const controller = require("./controller");
+const config = require("../../../config/config")
 
+let store1
+if (config.remoteDB) {
+	store1 = require("../../../store/remote-mySql");
+} 
+else {
+    store1 = require("../../../store/my-sql")
+}
 module.exports = controller(store1);
