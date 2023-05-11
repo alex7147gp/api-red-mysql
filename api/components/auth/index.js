@@ -3,7 +3,7 @@ const config = require("../../../config/config")
 
 let store1
 if (config.remoteDB) {
-	store1 = require("../../../store/remote-mySql");
+	store1 = require("../../../store/my-sql");
 } 
 else {
     store1 = require("../../../store/my-sql")

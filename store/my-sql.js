@@ -20,9 +20,9 @@ function handleCon() {
 			console.error("[db error]", err)
 		    setTimeout(handleCon, 2000)
 		}
-        else {
+    else {
         	console.log("DB Connected!")
-        }
+    }
 
 	})
 

@@ -1,12 +1,10 @@
 const express = require("express");
 
 
-const userService = require("../store/my-sql")
+const service = require("../store/redis")
 
 
 const router = express.Router();
-
-const service = userService
 
 router.get("/:table", async (req, res, next) => {
   
@@ -65,18 +63,5 @@ router.post("/:table/update", async (req, res, next) => {
 
 })
 
-router.post("/:table/:id/delete", async (req, res, next) => {
-  
-  const { id } = req.params
-
-  try {
-  	const users = await controller.deleteUser(id)
-    sucess(req, res, users)
-  }
-  catch (err) {
-    next(err)
-  }
-
-})
 
 module.exports = router

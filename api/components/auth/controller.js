@@ -10,9 +10,6 @@ module.exports = function (injectedStore) {
   	service = new require("../../../store/my-sql")
   }
 
-
-
-
   const addAuth = async (data) => {
 
     const hash = await bcrypt.hash(data.password, 10)

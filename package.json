@@ -8,6 +8,7 @@
     "dev": "nodemon api/index.js",
     "dev:my-sql": "nodemon my-sql/index.js",
     "dev:post": "nodemon post/index.js",
+    "dev:cache": "nodemon cache/index",
     "start": "node api/index.js"
   },
   "author": "john cc",
@@ -23,6 +24,7 @@
     "mysql": "^2.18.1",
     "nanoid": "^4.0.2",
     "nodemon": "^2.0.22",
+    "redis": "^4.6.6",
     "swagger-ui-express": "^4.6.2"
   }
 }

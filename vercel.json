@@ -8,6 +8,10 @@
     {
       "src": "post/index.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "my-sql/index.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
@@ -22,6 +26,10 @@
     {
       "src": "/api/post(.*)",
       "dest": "/post/index.js"
+    },
+    {
+      "src": "/api/v1(.*)",
+      "dest": "/my-sql/index.js"
     }
   ]
 }
