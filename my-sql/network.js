@@ -1,12 +1,10 @@
 const express = require("express");
 
 
-const userService = require("../store/my-sql")
+const service = require("../store/my-sql")
 
 
 const router = express.Router();
-
-const service = userService
 
 router.get("/:table", async (req, res, next) => {
   

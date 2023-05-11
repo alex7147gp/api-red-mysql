@@ -93,7 +93,7 @@ module.exports = function (injectedStore, injectedCache) {
 
   }
 
-  const deleteUser = (id) => {
+  const deleteUser = async (id) => {
 	  return await deleteUser(table, id)
   }
 

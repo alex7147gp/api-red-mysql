@@ -22,9 +22,9 @@ app.get("/", (req, res) => {
   res.send("this will greet red social")
 })
 
-app.use("/api/v1", router)
+app.use("/api", router)
 
-router.use("/", network)
+router.use("/v1", network)
 
 app.use(logErrors)
 
